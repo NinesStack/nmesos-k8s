@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+ASDF_RELEASE_FILE=nmesos-k8s-${ASDF_INSTALL_VERSION}.tar.gz
+
+cd ${ASDF_DOWNLOAD_PATH}
+
+gh release download --repo shimmur/nmesos-k8s --clobber --pattern ${ASDF_RELEASE_FILE}
+
+tar -xzf ${ASDF_RELEASE_FILE}
