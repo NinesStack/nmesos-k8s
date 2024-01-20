@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -e
 
 bin=${ASDF_DOWNLOAD_PATH}/nmesos-k8s
 bin_dir=${ASDF_INSTALL_PATH}/bin

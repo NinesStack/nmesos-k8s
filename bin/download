@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -e
 
 ASDF_RELEASE_FILE=nmesos-k8s-${ASDF_INSTALL_VERSION}.tar.gz
 

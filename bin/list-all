@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/bin/bash -e
 
-git tag | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tr '\n' ' '
+git tag | sort -V | tr '\n' ' '
