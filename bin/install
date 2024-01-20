@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-bin=${ASDF_DOWNLOAD_PATH}/nmesos-k8s
+bin=${ASDF_DOWNLOAD_PATH}/bin/nmesos-k8s
 bin_dir=${ASDF_INSTALL_PATH}/bin
 
 chmod 700 ${bin}

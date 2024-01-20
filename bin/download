@@ -4,6 +4,6 @@ ASDF_RELEASE_FILE=nmesos-k8s-${ASDF_INSTALL_VERSION}.tar.gz
 
 cd ${ASDF_DOWNLOAD_PATH}
 
-gh release download --repo shimmur/nmesos-k8s --clobber --pattern ${ASDF_RELEASE_FILE}
+gh release download ${ASDF_INSTALL_VERSION} --repo ninesstack/nmesos-k8s --clobber
 
 tar -xzf ${ASDF_RELEASE_FILE}
