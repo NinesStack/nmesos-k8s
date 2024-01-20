@@ -8,14 +8,6 @@ but deploys the service to Kubernetes.
 
 ## Installing it
 
-### With homebrew
-
-Install the app via brew ...
-
-```bash
-brew install ninesstack/tap/nmesos-k8s
-```
-
 ### From source
 
 1. Clone the repo
@@ -85,18 +77,6 @@ Mesos. They are the following:
 * `k8s` config section. This supports the following:
    * `namespace`: enables a specific namespace to be used for this service
    * `service_account_name`: sets the service account to a specific account
-
-## Build it
-
-`make build`
-
-## Release it
-
-`make release 1.2.3`
-
-Ignore: `make: *** No rule to make target `1.2.3'.  Stop.`
-
-We added a `git update-index --assume-unchanged lib/version.rb` so we don't accidentally add the `version/rb` file.
 
 [asdf]: https://asdf-vm.com
 [nmesos]: https://github.com/NinesStack/nmesos

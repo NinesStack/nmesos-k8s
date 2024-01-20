@@ -1,6 +1,7 @@
 *.jar
 .ruby-version
+.tools-version
 /coverage
-/nmesos-k8s
-*.tar.gz
+/bin/nmesos-k8s
+/dist/*.tar.gz
 .build/*
