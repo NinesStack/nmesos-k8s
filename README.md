@@ -29,8 +29,8 @@ Afterwards you can run ...
 
 ```
 asdf list-all nmeos-k8s
-asdf install nmesos-k8s latest
-asdf global nmesos-k8s latest
+asdf install nmesos-k8s <version>
+asdf global nmesos-k8s <version>
 ```
 
 ... to install whatever version(s) you want.
