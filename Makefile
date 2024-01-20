@@ -1,5 +1,5 @@
 APP_NAME = nmesos-k8s
-APP_VSN ?= $(shell git describe --tags --abbrev=0 | sed 's/v//')
+APP_VSN ?= $(git describe --tags --abbrev=0 | sed 's/v//')
 
 .PHONY: help
 help: #: Show this help message
@@ -45,7 +45,6 @@ release: check_git_status
 	git push origin  v$(tag)
 	APP_NAME=$(APP_NAME) APP_VSN=$(tag) ./release.sh
 	git checkout ./lib/version.rb
-release: build-release-docker
 
 ### Test
 .PHONY: test
