@@ -22,14 +22,6 @@ build-release: #: Build the app for release
 build-release: clean
 	APP_VSN=$(tag) APP_NAME=$(APP_NAME) ./assemble.sh
 
-.PHONY: build-release-docker
-build-release-docker: #: Build and push docker container
-build-release-docker:
-	docker build . \
-		-t $(APP_NAME):$(tag) \
-		-t quay.io/shimmur/$(APP_NAME):$(tag)
-	docker push quay.io/shimmur/$(APP_NAME):$(tag)
-
 .PHONY: clean
 clean: #: Clean up build artifacts
 clean:
@@ -49,7 +41,6 @@ release: #: Release a minor version of the app to github and community homebrew-
 release: clean
 release: build-release
 release: check_git_status
-	# Tag the release
 	git tag -a v$(tag) -m "Release version $(tag)"
 	git push origin  v$(tag)
 	APP_NAME=$(APP_NAME) APP_VSN=$(tag) ./release.sh
